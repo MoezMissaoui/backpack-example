@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ReadmeController;
 use Illuminate\Support\Facades\Route;
 
 // --------------------------
@@ -16,4 +17,7 @@ Route::group([
     ),
     'namespace'  => 'App\Http\Controllers\Admin',
 ], function () { // custom admin routes
+
+    Route::name('readme')->get('readme', ReadmeController::class);
+
 }); // this should be the absolute last line of this file
