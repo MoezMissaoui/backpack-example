@@ -20,4 +20,5 @@ Route::group([
 
     Route::name('readme')->get('readme', ReadmeController::class);
 
+    Route::crud('user', 'UserCrudController');
 }); // this should be the absolute last line of this file
